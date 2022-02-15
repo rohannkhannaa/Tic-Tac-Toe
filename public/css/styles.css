@@ -1,0 +1,144 @@
+body{
+    background-color: aliceblue;
+    color: white;
+    text-align: center;
+    background-image: url("/Images/bgImage.jpg");
+    background-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button{
+    height: 90px;
+    width: 90px;
+    font-size: 50px;
+    color: white;
+    /* border: none; */
+    background-color: transparent  ;
+    background-color: rgba(255, 255, 255, 0);
+    border: solid white 3px;
+}
+button:hover{
+    background-color: rgba(255, 255, 255, 0.267); 
+}
+div{
+    padding: 30px 0;
+}
+h1{
+    margin-top: 0px;
+    position: relative;
+    padding-top: 30px;
+    font-size: 60px;
+    padding-bottom: 20px;
+    animation: headingAni 2s ;
+
+}
+@keyframes headingAni{
+    from {left: 2000px;}
+  to {left: 0px;}
+}
+
+table{
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+}
+.invalid{
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+    display: inline;
+    color: red;
+    border: solid red 1px ;
+    animation: invalid 1.5s ;
+}
+.winnerDecided{
+    height: 90px;
+    width: 90px;
+    font-size: 80px;
+    color: red !important;
+    font-weight: bold !important;
+    /* border: none; */
+    background-color: transparent  ;
+    background-color: rgba(255, 255, 255, 0);
+    border: solid red 3px !important;
+    animation: winnerDecide 2s !important;
+}
+@keyframes winnerDecide {
+    50%{
+        font-size: 80px;
+        color: red;
+        border: solid white 1px ;
+    }
+    100%{
+        font-size: 85px;
+        color: red;
+        border: solid red 1px ;
+    }
+}
+@keyframes invalid {
+    0%{
+        font-size: 30px;
+        color: white;
+        border: solid white 1px ;
+    }
+    25%{
+        font-size: 35px;
+        color: red;
+        border: solid red 1px ;
+    }
+    50%{
+        font-size: 30px;
+        color: white;
+        border: solid white 1px ;
+    }
+    100%{
+        font-size: 35px;
+        color: red;
+        border: solid red 1px ;
+    }
+}
+.turnDecider{
+    font-size: 30px;
+    border: solid white;
+    display: inline;
+    padding: 10px;
+    position: relative;
+    left : 35px;
+    animation: animate2 2s;
+}
+@keyframes animate2 {
+    from {bottom: 300px;}
+    to {bottom: 0px;}
+}
+.activateReset{
+    visibility: visible !important; 
+    position: relative ;
+    font-size: 30px;
+    height : 60.8px ;
+    width: 120.81px;
+    padding: 10px;
+    margin-left: auto;
+    font-weight: bold;
+    margin-right: auto;
+    animation : resetActive 2s ;
+}
+@keyframes resetActive {
+    from{
+        bottom: 500px;
+    }
+    to{
+        bottom: 1px ;
+    }
+    
+}
+.resetButton{
+    visibility: hidden ; 
+    position: relative ;
+    font-size: 30px;
+    padding: 10px;
+    border : solid 2px white ;
+    margin-left: auto;
+    margin-right: auto;
+}
