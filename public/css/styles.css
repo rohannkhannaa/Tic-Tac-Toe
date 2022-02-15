@@ -51,6 +51,8 @@ table{
     display: inline;
     color: red;
     border: solid red 1px ;
+    position: relative;
+    left : 35px;
     animation: invalid 1.5s ;
 }
 .winnerDecided{
