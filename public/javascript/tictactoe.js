@@ -32,14 +32,14 @@ function applyResetLayout(){
 function changeTurn(){
     x = checkWinner();
     if(x===2){
-        alert("Draw detected");
+        // alert("Draw detected");
         $(".turnDecider").hide();
         $(".resetButton").addClass("activateReset");
         var mark = 'D';
         applyResetLayout(mark);
     }
     else if(x===1){
-        alert("Win detected");
+        // alert("Win detected");
         $(".turnDecider").hide();
         $(".resetButton").addClass("activateReset");
         for(var i = 0 ; i < 3 ; i++){
