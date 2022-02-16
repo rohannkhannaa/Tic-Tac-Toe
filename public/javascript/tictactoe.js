@@ -2,6 +2,7 @@
 var winArray ;
 var currentTurn ;
 var button ;
+var counter = 0 ;
 var x = -1 ;
 changeTurn();
 function reset(){
@@ -15,8 +16,11 @@ function applyResetLayout(){
     if(mark == 'X'){
         $("h1").text ("🚩 Player I won");
     }
-    if(mark == 'O'){
+    if (mark == 'O'){
         $("h1").text ("Player II won 🚩");
+    }
+    if(mark == 'D'){
+        $("h1").text ("🚩 Match is draw 🚩");
     }
 
     $(".resetButton").on("click", function(){
@@ -27,7 +31,15 @@ function applyResetLayout(){
 
 function changeTurn(){
     x = checkWinner();
-    if(x===1){
+    if(x===2){
+        alert("Draw detected");
+        $(".turnDecider").hide();
+        $(".resetButton").addClass("activateReset");
+        var mark = 'D';
+        applyResetLayout(mark);
+    }
+    else if(x===1){
+        alert("Win detected");
         $(".turnDecider").hide();
         $(".resetButton").addClass("activateReset");
         for(var i = 0 ; i < 3 ; i++){
@@ -38,6 +50,7 @@ function changeTurn(){
         applyResetLayout(mark);
     }
     else{
+        counter++;
         if(currentTurn==='X'){
             // alert("Alert X-> O");
             currentTurn='O';
@@ -117,5 +130,8 @@ function checkWinner(){
         return 1;
     }
     // Winner not made yet
+    if(counter===9){
+        return 2 ;
+    }
     return 0;
 }

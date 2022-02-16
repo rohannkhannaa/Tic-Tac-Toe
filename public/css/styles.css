@@ -34,7 +34,7 @@ h1{
 }
 @keyframes headingAni{
     from {left: 2000px;}
-  to {left: 0px;}
+    to {left: 0px;}
 }
 
 table{
