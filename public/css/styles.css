@@ -2,7 +2,7 @@ body{
     background-color: aliceblue;
     color: white;
     text-align: center;
-    background-image: url("/Images/bgImage.jpg");
+    background-image: url("../Images/bgImage.jpg");
     background-size: 100%;
     font-family: 'Montserrat', sans-serif;
 }
